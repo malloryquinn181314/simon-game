@@ -5,7 +5,7 @@ var level = 0;
 var game = "loading"
 
 
-$(document).keypress(function () {
+$("#level-title").click(function () {
 
     if (game === "loading") {
 
@@ -98,7 +98,7 @@ function checkAnswer(currentLevel) {
     else {
 
         playsound("wrong");
-        $("#level-title").html("Game Over, Press a Key <br> <br>To Restart!");
+        $("#level-title").html("Game Over, Tap Here <br> <br>To Restart!");
         $("body").addClass("game-over");
         setTimeout(() => {
             $("body").removeClass("game-over");
